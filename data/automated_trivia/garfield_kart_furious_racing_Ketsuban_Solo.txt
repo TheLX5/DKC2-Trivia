@@ -1,5 +1,5 @@
 PARSER: 1
-GAME: Garfield Kart: Furious Racing
+GAME: Garfield Kart - Furious Racing
 AUTHOR: Solo
 ---
 QUESTION: EASY
