@@ -1,7 +1,6 @@
 from .types import TriviaQuestion, Topic
-from typing import List
 
-def format_dkc2_question(question: List[str]) -> List[str]:
+def format_dkc2_question(question: list[str]) -> list[str]:
     total_lines = len(question)
     if total_lines == 1:
         question.insert(0, "°")
@@ -34,7 +33,7 @@ def format_dkc2_answer(answer: str) -> str:
         return answer.strip() + "°°"
 
 
-def parser_version_1(topic_data: List[str], is_dkc2: bool) -> Topic | None:
+def parser_version_1(topic_data: list[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None
@@ -145,7 +144,7 @@ def parser_version_1(topic_data: List[str], is_dkc2: bool) -> Topic | None:
     return Topic(topic_name, trivia_easy, trivia_medium, trivia_hard)
 
 
-def parser_version_2(topic_data: List[str], is_dkc2: bool) -> Topic | None:
+def parser_version_2(topic_data: list[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None

@@ -1,5 +1,3 @@
-from typing import List
-
 class TriviaQuestion():
     question: list | str
     correct_answer: str
@@ -9,7 +7,7 @@ class TriviaQuestion():
     author: str
 
     def __init__(self, 
-                 question: List[str] | str, 
+                 question: list[str] | str, 
                  author: str,
                  topic_name: str,
                  correct_answer: str, 
@@ -28,27 +26,27 @@ class TriviaQuestion():
         else:
             self.incorrect_answer_3 = incorrect_answer_3
     
-    def fetch_incorrect_answers(self) -> List[str]:
+    def fetch_incorrect_answers(self) -> list[str]:
         return [self.incorrect_answer_1, self.incorrect_answer_2, self.incorrect_answer_3]
 
 
 class Topic():
     topic_name: str
-    easy_questions: List[TriviaQuestion]
-    medium_questions: List[TriviaQuestion]
-    hard_questions: List[TriviaQuestion]
+    easy_questions: list[TriviaQuestion]
+    medium_questions: list[TriviaQuestion]
+    hard_questions: list[TriviaQuestion]
 
     def __init__(self, 
                  topic_name: str, 
-                 easy_questions: List[TriviaQuestion], 
-                 medium_questions: List[TriviaQuestion], 
-                 hard_questions: List[TriviaQuestion]
+                 easy_questions: list[TriviaQuestion], 
+                 medium_questions: list[TriviaQuestion], 
+                 hard_questions: list[TriviaQuestion]
                  ) -> None:
         self.topic_name = topic_name
         self.easy_questions = easy_questions.copy()
         self.medium_questions = medium_questions.copy()
         self.hard_questions = hard_questions.copy()
 
-    def fetch_every_question(self) -> List[TriviaQuestion]:
+    def fetch_every_question(self) -> list[TriviaQuestion]:
         return self.easy_questions + self.medium_questions + self.hard_questions
 
