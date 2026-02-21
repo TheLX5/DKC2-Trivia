@@ -6,8 +6,19 @@ class TriviaQuestion():
     incorrect_answer_1: str
     incorrect_answer_2: str
     incorrect_answer_3: str
+    author: str
 
-    def __init__(self, question: list, correct_answer: str, incorrect_answer_1: str, incorrect_answer_2: str, incorrect_answer_3: str | None = None) -> None:
+    def __init__(self, 
+                 question: List[str] | str, 
+                 author: str,
+                 topic_name: str,
+                 correct_answer: str, 
+                 incorrect_answer_1: str, 
+                 incorrect_answer_2: str, 
+                 incorrect_answer_3: str | None = None,
+                 ) -> None:
+        self.author = author
+        self.game = topic_name
         self.question = question
         self.correct_answer = correct_answer
         self.incorrect_answer_1 = incorrect_answer_1
@@ -27,7 +38,12 @@ class Topic():
     medium_questions: List[TriviaQuestion]
     hard_questions: List[TriviaQuestion]
 
-    def __init__(self, topic_name: str, easy_questions: List[TriviaQuestion], medium_questions: List[TriviaQuestion], hard_questions: List[TriviaQuestion]):
+    def __init__(self, 
+                 topic_name: str, 
+                 easy_questions: List[TriviaQuestion], 
+                 medium_questions: List[TriviaQuestion], 
+                 hard_questions: List[TriviaQuestion]
+                 ) -> None:
         self.topic_name = topic_name
         self.easy_questions = easy_questions.copy()
         self.medium_questions = medium_questions.copy()

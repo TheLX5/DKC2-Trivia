@@ -26,19 +26,27 @@ def format_dkc2_question(question: List[str]) -> List[str]:
     return question
 
 
+def format_dkc2_answer(answer: str) -> str:
+    if "°" in answer:
+        answer = answer.split("°")
+        return f"{answer[0].strip()}°        {answer[1].strip()}°"
+    else:
+        return answer.strip() + "°°"
+
+
 def parser_version_1(topic_data: List[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None
-    topic_name = topic_data[1].split(": ")[1].rstrip()
+    topic_name = topic_data[1][5:].strip()
     if "AUTHOR:" not in topic_data[2]:
         print (f"Failed to fetch the trivia author.")
         return None
-    topic_author = topic_data[2].split(": ")[1].rstrip()
+    topic_author = topic_data[2][7:].strip()
     if "---" not in topic_data[3]:
         print (f"Failed to find a separator between the header and the first question.")
         return None
-    
+
     idx = 4
     trivia_easy = []
     trivia_medium = []
@@ -93,13 +101,11 @@ def parser_version_1(topic_data: List[str], is_dkc2: bool) -> Topic | None:
                         if len(answer.split("°")[0]) > 24 or len(answer.split("°")[1].strip()) > 24:
                             print (f"[{topic_name} | {topic_author}] Line {idx+idy+1} exceeded the maximum allowed length of 24 for one of its lines (it has {len(answer)}).")
                             return None
-                        answer += "°"
                     else:
                         if len(answer) > 24:
                             print (f"[{topic_name} | {topic_author}] Line {idx+idy+1} exceeded the maximum allowed length of 24 (it has {len(answer)}).")
                             return None
-                        answer += "°°"
-                    answers.append(answer)
+                    answers.append(format_dkc2_answer(answer))
             else:
                 for idy in range(3):
                     answer = topic_data[idx+idy].strip()
@@ -115,7 +121,13 @@ def parser_version_1(topic_data: List[str], is_dkc2: bool) -> Topic | None:
                     answers.append(answer)
             
             idx += 3
-            question_data = TriviaQuestion(question, answers[0], answers[1], answers[2])
+            question_data = TriviaQuestion(question=question, 
+                                           topic_name=topic_name,
+                                           author=topic_author,
+                                           correct_answer=answers[0], 
+                                           incorrect_answer_1=answers[1], 
+                                           incorrect_answer_2=answers[2]
+                                           )
 
             if difficulty == "EASY":
                 trivia_easy.append(question_data)
@@ -137,11 +149,11 @@ def parser_version_2(topic_data: List[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None
-    topic_name = topic_data[1].split(": ")[1].rstrip()
+    topic_name = topic_data[1][5:].strip()
     if "AUTHOR:" not in topic_data[2]:
         print (f"Failed to fetch the trivia author.")
         return None
-    topic_author = topic_data[2].split(": ")[1].rstrip()
+    topic_author = topic_data[2][7:].strip()
     if "---" not in topic_data[3]:
         print (f"Failed to find a separator between the header and the first question.")
         return None
@@ -200,13 +212,11 @@ def parser_version_2(topic_data: List[str], is_dkc2: bool) -> Topic | None:
                         if len(answer.split("°")[0]) > 24 or len(answer.split("°")[1].strip()) > 24:
                             print (f"[{topic_name} | {topic_author}] Line {idx+idy+1} exceeded the maximum allowed length of 24 for one of its lines (it has {len(answer)}).")
                             return None
-                        answer += "°"
                     else:
                         if len(answer) > 24:
                             print (f"[{topic_name} | {topic_author}] Line {idx+idy+1} exceeded the maximum allowed length of 24 (it has {len(answer)}).")
                             return None
-                        answer += "°°"
-                    answers.append(answer)
+                    answers.append(format_dkc2_answer(answer))
             else:
                 for idy in range(4):
                     answer = topic_data[idx+idy].strip()
@@ -222,7 +232,14 @@ def parser_version_2(topic_data: List[str], is_dkc2: bool) -> Topic | None:
                     answers.append(answer)
             
             idx += 4
-            question_data = TriviaQuestion(question, answers[0], answers[1], answers[2], answers[3])
+            question_data = TriviaQuestion(question=question, 
+                                           topic_name=topic_name,
+                                           author=topic_author,
+                                           correct_answer=answers[0], 
+                                           incorrect_answer_1=answers[1], 
+                                           incorrect_answer_2=answers[2], 
+                                           incorrect_answer_3=answers[3]
+                                           )
 
             if difficulty == "EASY":
                 trivia_easy.append(question_data)
