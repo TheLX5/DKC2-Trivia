@@ -1,5 +1,5 @@
 short_names = {
-    "A Link to the Past": "TLoZ: ALttP",
+    "A Link to the Past": "ALttP",
     "Castlevania - Circle of the Moon": "CV: CotM",
     "Diddy Kong Racing": "DKR",
     "Donkey Kong Country": "DKC",
