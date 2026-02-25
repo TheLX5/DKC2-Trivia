@@ -28,7 +28,7 @@ The question format should follow this:
 * Next go the answers for your question. The parser will process exactly four lines after `ANSWERS:`. It'll process three lines if version 1 is used.
   * The first line will **always** be the correct answer
   * Answers should NOT exceed 24 characters
-    * However, you can trick the parser into making the answer be two lines long by adding this `°` character as a new line separator. This is mainly a DKC2 quirk.
+    * However, you can trick the parser into making the answer be two lines long by adding this `°` character as a new line separator. This is mainly a DKC2 quirk. I do recommend sticking to a single line answer so the question fits into more games.
 * Finally, a separator (`---`) **must** be included after entering the last incorrect answer
 
 The filename of the `.txt` file does not matter.
