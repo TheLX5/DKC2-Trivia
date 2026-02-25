@@ -34,4 +34,36 @@ The question format should follow this:
 The filename of the `.txt` file does not matter.
 
 # Interacting with the database as a developer
-WIP. I wanted to allow users to contribute to the database while I finish up some details about it.
+You can import the parsed trivia database with:
+```
+from worlds._dkc2_trivia.trivia import parse_topics
+
+trivia_topics = parse_topics()
+```
+It will return a dictionary containing the entire database by topic name, with each topic contained in its own `Topic` object (`dict[str, Topic]`).
+
+## Topic object
+`Topic` objects contain every single question that falls into said topic separated by easy, medium and hard questions. Those can be accesed by the `Topic`'s attributes and they return a list:
+```
+easy_questions: list[TriviaQuestion]
+medium_questions: list[TriviaQuestion]
+hard_questions: list[TriviaQuestion]
+```
+Alternatively, you can also fetch every question regardless of its difficulty with the `fetch_every_question()` function.
+
+## TriviaQuestion object
+Questions are bundled with their answers (one correct, three incorrect). They also have some miscelaneous data that may be useful for someone (`author` and `topic_name`). You can access the question data via the attributes of the object:
+```
+question: str
+author: str
+topic_name: str
+correct_answer: str
+incorrect_answer_1: str
+incorrect_answer_2: str
+incorrect_answer_3: str
+```
+There's the `fetch_incorrect_answers()` function that returns a list of incorrect answers (`list[str]`).
+
+Do note that most of the questions were made with DKC2 in mind, which means that most of them have an "invalid" third incorrect answer which defaults to `"None are correct :)"`.
+
+Not so relevant note: If one passes a specific bool through `parse_topics`, `question` will return a `list[str]` instead which also has a very _different_ format. Said bool defaults to false, so there's nothing to worry about not declaring it anywhere.
