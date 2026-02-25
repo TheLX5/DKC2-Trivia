@@ -67,3 +67,17 @@ There's the `fetch_incorrect_answers()` function that returns a list of incorrec
 Do note that most of the questions were made with DKC2 in mind, which means that most of them have an "invalid" third incorrect answer which defaults to `"None are correct :)"`.
 
 Not so relevant note: If one passes a specific bool through `parse_topics`, `question` will return a `list[str]` instead which also has a very _different_ format. Said bool defaults to false, so there's nothing to worry about not declaring it anywhere.
+
+## Shorter game names
+In case you require short game names and don't want to create a dictionary of those, the apworld also provides those.
+```
+from worlds._dkc2_trivia.games import short_names
+```
+`short_names` is a `dict[str, str]` where the keys are the full game name (the one declared in the APWorld) and the values are the shorter names. Example: `"Super Mario World": "SMW"`
+
+## Game aliases
+Since there are games with multiple implementations, I decided to also provide within the apworld some aliases for those games.
+```
+from worlds._dkc2_trivia.games import aliases
+```
+`aliases` is a `dict[str, str]`, where keys are the full game implementation name (the one declared in the APWorld) and the values are the "common" or "shared" game name. Example: `"SMW: Spicy Mycena Waffles": "Super Mario World"`
