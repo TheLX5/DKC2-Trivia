@@ -8,7 +8,7 @@ You can submit questions via a [Google Form](https://forms.gle/Wh5U2dLMTcYgB64o7
 Questions uploaded by the Google Form will be merged slowly into the repo.
 
 ## Creating a txt manually
-You may use as an example [this .txt file](https://github.com/TheLX5/DKC2-Trivia/blob/master/data/examples/parser_2_example.txt) to understand how the format works.
+You may use as an example [this .txt file](https://github.com/TheLX5/DKC2-Trivia/blob/master/examples/parser_2_example.txt) to understand how the format works.
 
 The first lines before the first set of `---` corresponds to the file's header, which populates some data about the game such as:
 * Parser version (`PARSER`): Usually it's better to leave it at 2.
