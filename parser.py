@@ -33,11 +33,14 @@ def format_dkc2_answer(answer: str) -> str:
         return answer.strip() + "°°"
 
 
-def parser_version_1(topic_data: list[str], is_dkc2: bool) -> Topic | None:
+def parser_version_1(topic_data: list[str], valid_topics: list[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None
     topic_name = topic_data[1][5:].strip()
+    if len(valid_topics) != 0:
+        if topic_name not in valid_topics:
+            return None
     if "AUTHOR:" not in topic_data[2]:
         print (f"Failed to fetch the trivia author.")
         return None
@@ -144,11 +147,14 @@ def parser_version_1(topic_data: list[str], is_dkc2: bool) -> Topic | None:
     return Topic(topic_name, trivia_easy, trivia_medium, trivia_hard)
 
 
-def parser_version_2(topic_data: list[str], is_dkc2: bool) -> Topic | None:
+def parser_version_2(topic_data: list[str], valid_topics: list[str], is_dkc2: bool) -> Topic | None:
     if "GAME:" not in topic_data[1]:
         print (f"Failed to fetch the game name.")
         return None
     topic_name = topic_data[1][5:].strip()
+    if len(valid_topics) != 0:
+        if topic_name not in valid_topics:
+            return None
     if "AUTHOR:" not in topic_data[2]:
         print (f"Failed to fetch the trivia author.")
         return None
