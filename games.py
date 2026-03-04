@@ -48,6 +48,25 @@ short_names = {
     "Momodora Moonlit Farewell": "Momodora 5",
     "Yoku's Island Express": "Yoku's Island",
     "Plants vs. Zombies: Replanted": "PvZ: Replanted",
+    "Mega Man": "MM1",
+    "Mega Man 2": "MM2",
+    "Mega Man 3": "MM3",
+    "Mega Man 4": "MM4",
+    "Mega Man 5": "MM5",
+    "Mega Man 6": "MM6",
+    "Mega Man 7": "MM7",
+    "Mega Man 8": "MM8",
+    "Mega Man 9": "MM9",
+    "Mega Man 10": "MM10",
+    "Mega Man 11": "MM11",
+    "Mega Man X": "MMX",
+    "Mega Man X2": "MMX2",
+    "Mega Man X3": "MMX3",
+    "Mega Man X4": "MMX4",
+    "Mega Man X5": "MMX5",
+    "Mega Man X6": "MMX6",
+    "Mega Man X7": "MMX7",
+    "Mega Man X8": "MMX8",
 }
 
 aliases = {
@@ -76,4 +95,3 @@ aliases = {
     "UZDoom (Scythe 2)": "Doom 1993",
     "UZDoom (Zone 300)": "Doom 1993",
 }
-
