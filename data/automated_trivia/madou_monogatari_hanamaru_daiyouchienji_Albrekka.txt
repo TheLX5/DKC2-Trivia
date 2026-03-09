@@ -1,0 +1,164 @@
+PARSER: 1
+GAME: Madou Monogatari Hanamaru Daiyouchienji
+AUTHOR: Albrekka
+---
+QUESTION: EASY
+In Madou Monogatari for the
+SNES, how many Secret Stones
+are needed to wish for the
+Final Exam Certificate?
+ANSWERS:
+8
+7
+9
+---
+QUESTION: HARD
+When determining who was
+stealing from Ancient
+Village in Madou Monogatari
+for the SNES, placement-wise,
+who was the culprit?
+ANSWERS:
+Bottom Right
+Top Left
+Middle Right
+---
+QUESTION: MEDIUM
+What spell in Madou
+Monogatari for the SNES
+almost always fails, but
+does a lot of damage?
+ANSWERS:
+Jugem
+Diacute
+Braindumbed
+---
+QUESTION: MEDIUM
+What does Arle's mother in
+Madou Monogatari for the SNES
+give you upon giving her
+every souvenir?
+ANSWERS:
+White Gem
+Bouquet
+Elephant Toy
+---
+QUESTION: EASY
+What character in Madou
+Monogatari for the SNES
+swaps the Light and Dark
+Orbs from Light and Dark
+Forest respectively?
+ANSWERS:
+Suketoudara
+Sukiyapodes
+Nasu Grave
+---
+QUESTION: EASY
+What series eventually took
+over as the main game Arle
+was in after the Madou
+Monogatari franchise?
+ANSWERS:
+Puyo Puyo
+Sonic
+Mean Bean Machine
+---
+QUESTION: HARD
+What is Carbuncle's role
+in Madou Monogatari for the
+SNES?
+ANSWERS:
+Rarely does damage in fight
+Saves Arle from disaster
+Makes Satan give item
+---
+QUESTION: MEDIUM
+What item must you give
+the Mandragora in Madou
+Monogatari for the SNES
+so they give you a leaf?
+ANSWERS:
+Momomo Wine
+Dragon Meat
+Pickled Scallions
+---
+QUESTION: EASY
+What does the Magic
+Dictionary in Madou
+Monogatari for the SNES
+do?
+ANSWERS:
+Read Gold Tablets
+Read Silver Tablets
+Learn Basic Literacy
+---
+QUESTION: MEDIUM
+In Madou Monogatari for the
+SNES, where is the spell
+Revia learned?
+ANSWERS:
+North & South Cave
+Death Valley
+Shady Well
+---
+QUESTION: HARD
+In Madou Monogatari for the
+SNES, what is the maze
+theme for the leftmost path
+in the Magical Tower?
+ANSWERS:
+Generic Maze
+Number Maze
+Color Block Maze
+---
+QUESTION: EASY
+In Madou Monogatari for the
+SNES, how many Secret Stones
+are required to enter
+Satan's Villa in Dark
+Forest?
+ANSWERS:
+3
+4
+2
+---
+QUESTION: MEDIUM
+In Madou Monogatari for the
+SNES, which of these special
+items is not required to
+beat the game?
+ANSWERS:
+Magic Ribbon
+Sukiyapodes' Hammer
+Magic Bracelet
+---
+QUESTION: HARD
+By finding every gem in
+Madou Monogatari for the
+SNES, what is your reward?
+ANSWERS:
+Gold Tablets
+Secret Stone
+Wanderlust
+---
+QUESTION: HARD
+The item Wanderlust in
+Madou Monogatari increases
+EXP gain.  What is the
+side effect of this item?
+ANSWERS:
+Enemies are tougher
+Increase encounter rates
+Can't heal
+---
+QUESTION: EASY
+In Madou Monogatari for the
+SNES, you can't see how
+much health Arle has left.
+In the overworld, how do
+you tell?
+ANSWERS:
+Arle's picture
+How fast Arle moves
+In status menu

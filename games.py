@@ -67,6 +67,7 @@ short_names = {
     "Mega Man X6": "MMX6",
     "Mega Man X7": "MMX7",
     "Mega Man X8": "MMX8",
+    "Madou Monogatari Hanamaru Daiyouchienji": "Madou Monogatari",
 }
 
 aliases = {
