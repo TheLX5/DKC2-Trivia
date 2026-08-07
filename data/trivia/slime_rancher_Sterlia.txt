@@ -1,0 +1,76 @@
+PARSER: 2
+GAME: Slime Rancher
+AUTHOR: Sterlia
+---
+QUESTION: EASY
+How many types of slimes are in Slime Rancher?
+ANSWERS:
+22
+19
+67
+25
+---
+QUESTION: EASY
+What is the name of the main character of Slime Rancher?
+ANSWERS:
+Beatrix LeBeau
+Leatrix BeLeau
+Beatrix Labubu
+Sterlia LeBeau
+---
+QUESTION: HARD
+How many treasure pods are in Hobson's Vaults?
+ANSWERS:
+42
+41
+43
+44
+---
+QUESTION: HARD
+What is the maximum number of combinations of largos in Slime Rancher?
+ANSWERS:
+182
+196
+169
+156
+---
+QUESTION: MEDIUM
+How many different people are available to trade with through the market?
+ANSWERS:
+5
+4
+3
+1
+---
+QUESTION: MEDIUM
+How many slime keys are there in Slime Rancher?
+ANSWERS:
+12
+11
+10
+9
+---
+QUESTION: MEDIUM
+What is the name of Beatrix LeBeau's lover back on earth?
+ANSWERS:
+Casey
+Hobson
+BOb
+She's single
+---
+QUESTION: EASY
+What is the favorite food of the ever elusive Gold Slime?
+ANSWERS:
+Gilded Ginger
+Silver-Plated Spinach
+Chromium Corn
+Bejeweled Broccoli
+---
+QUESTION: MEDIUM
+What food group do the most slimes have as their favorite?
+ANSWERS:
+The Majority actually don't have a favorite
+Veggies
+Fruit
+Meat
+---
